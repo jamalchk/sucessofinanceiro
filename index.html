@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora da Receita do Sucesso Financeiro</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#392875">
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Calculadora da Receita do Sucesso Financeiro">
+    <meta name="description" content="Baseado no vídeo da Nathalia Arcuri no canal Me Poupe!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jamalchk.com/sucesso/">
+    <meta property="og:title" content="Calculadora da Receita do Sucesso Financeiro">
+    <meta property="og:description" content="Baseado no vídeo da Nathalia Arcuri no canal Me Poupe!">
+    <meta property="og:image" content="media.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jamalchk.com/sucesso/">
+    <meta property="twitter:title" content="Calculadora da Receita do Sucesso Financeiro">
+    <meta property="twitter:description" content="Baseado no vídeo da Nathalia Arcuri no canal Me Poupe!">
+    <meta property="twitter:image" content="media.png">
+
+    <!-- App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#392875">
+    <meta name="apple-mobile-web-app-title" content="Sucesso Financeiro">
+    <meta name="application-name" content="Sucesso Financeiro">
+    <meta name="msapplication-TileColor" content="#392875">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Calculadora</h1>
+        <h2 class="cabecalho__subtitulo">Receita do Sucesso Financeiro</h2>
+    </header>
+
+    <div class="container">
+        <div class="container__introducao-e-formulario">
+
+            <p class="introducao__paragrafo">
+                A <strong>Nathalia Arcuri</strong>, do canal <a href="" class="introducao__link"><strong>Me Poupe!</strong></a>, criou uma receita para que sempre haja dinheiro sobrando ao fim do mês (<a href="https://www.youtube.com/watch?v=eQ1ao0XD4dQ" class="introducao__link" target="_blank">veja o vídeo aqui</a>). Pra facilitar a sua vida, esta calculadora faz todas as contas pra você saber a melhor forma de dividir o seu dinheiro. 
+            </p>
+
+            <div aria-label="form" class="formulario">
+                <label class="formulario__instrucao" for="salario">Informe seu salário (em R$)</label>
+                <input class="formulario__campo" type="number" name="salario" id="salario" placeholder="0,00" min="0" maxlength="9">
+                <button class="formulario__enviar" type="button">Calcular</button>
+            </div>
+        </div>
+
+        <table class="tabela__resultados">
+            <thead>
+                <tr>
+                    <th class="tabela__titulo u-alinhado-a-esquerda">Categoria</th>
+                    <th class="tabela__titulo u-alinhado-a-direita">Valor</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr class="resultado resultado__essencial">
+                    <td class="tabela__dado">⭐ Gastos essenciais (55%)</td>
+                    <td class="tabela__dado valor">R$ 0,00</td>
+                </tr>
+                <tr class="resultado resultado__aposentadoria">
+                    <td class="tabela__dado">👴 Aposentadoria (10%)</td>
+                    <td class="tabela__dado valor">R$ 0,00</td>
+                </tr>
+                <tr class="resultado resultado__educacao">
+                    <td class="tabela__dado">🎓 Educação (5%)</td>
+                    <td class="tabela__dado valor">R$ 0,00</td>
+                </tr>
+                <tr class="resultado resultado__planos-pessoais">
+                    <td class="tabela__dado">🎯 Planos pessoais (20%)</td>
+                    <td class="tabela__dado valor">R$ 0,00</td>
+                </tr>
+                <tr class="resultado resultado__dinheiro-livre">
+                    <td class="tabela__dado">🎁 Dinheiro livre (10%)</td>
+                    <td class="tabela__dado valor">R$ 0,00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="rodape">
+        Programado por <a class="rodape__link" href="https://jamalchk.com">Jamal Charanek</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

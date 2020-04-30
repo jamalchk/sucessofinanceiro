@@ -1,0 +1,264 @@
+:root {
+    --cor-fundo: #ffffff;
+    --cor-texto: #2c2c2c;
+    --cor-primaria: #392875;
+    --cor-secundaria: #f4a63d;
+    --cor-terciaria: #c0730b;
+    --cor-cinza-1: #f2f2f2;
+    --cor-cinza-2: #d8d8d8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 
+LAYOUT
+============ 
+*/
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    padding: 48px;
+}
+
+.container__introducao-e-formulario {
+    display: flex;
+    flex-grow: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 40%;
+}
+
+
+/* 
+CABEÇALHO
+============ 
+*/
+
+.cabecalho {
+    padding: 24px;
+    text-align: center;
+}
+
+.cabecalho__titulo {
+    background: var(--cor-secundaria);
+    padding: 8px 16px;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 auto 16px;
+}
+
+.cabecalho__subtitulo {
+    color: var(--cor-primaria);
+    line-height: 1;
+    font-size: 24px;
+}
+
+
+/* 
+INTRODUÇÃO
+============ 
+*/
+
+
+.introducao__paragrafo {
+    text-align: left;
+}
+
+.introducao__link {
+    border-bottom: 2px solid var(--cor-secundaria);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+/* 
+FORMULÁRIO
+============ 
+*/
+
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formulario__instrucao {
+    font-weight: 700;
+    margin: 24px 0 4px;
+    color: var(--cor-primaria);
+}
+
+.formulario__campo {
+    padding: 24px;
+    margin: 16px auto 24px;
+    font-family: inherit;
+    color: var(--cor-primaria);
+    border: 0;
+    border-bottom: 5px solid var(--cor-primaria);
+    font-size: 34px;
+    max-width: 300px;
+    background: var(--cor-cinza-1);
+    text-align: right;
+    position: relative;
+}
+
+.formulario__campo::placeholder {
+    opacity: 0.3;
+}
+
+.formulario__campo:focus {
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+    outline: 2px dashed var(--cor-secundaria);
+    outline-
+}
+
+.formulario__enviar {
+    background: var(--cor-secundaria);
+    box-shadow: 0 1px 0 1px var(--cor-terciaria);
+    color: var(--cor-primaria);
+    font-family: inherit;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 40px;
+    border: 0;
+    padding: 16px 64px;
+    cursor: pointer;
+}
+
+
+/* 
+TABELA DE RESULTADOS
+============ 
+*/
+
+.tabela__resultados {
+    border-collapse: collapse;
+    margin: 0 24px;
+    height: 100%;
+    flex: 1;
+}
+
+.valor {
+    text-align: right;
+    color: var(--cor-cinza-2);
+}
+
+.tabela__titulo {
+    border: 2px solid var(--cor-cinza-2);
+    background: var(--cor-cinza-1);
+    padding: 12px;
+}
+
+.tabela__dado {
+    border: 2px solid var(--cor-cinza-2);
+    padding: 16px;
+}
+
+.u-alinhado-a-esquerda {
+    text-align: left;
+}
+
+.u-alinhado-ao-centro {
+    text-align: center;
+}
+
+.u-alinhado-a-direita {
+    text-align: right;
+}
+
+.animar-valores-da-tabela {
+    color: var(--cor-primaria);
+    font-weight: 700;
+    animation-name: destacar;
+    animation-duration: 0.2s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+@keyframes destacar {
+    0% {
+        background: none;
+    }
+    
+    100% {
+        background: var(--cor-secundaria);
+    }
+}
+
+
+/* 
+RODAPÉ
+============ 
+*/
+
+.rodape {
+    text-align: center;
+    font-size: 12px;
+    padding: 36px;
+    background: var(--cor-cinza-1);
+}
+
+.rodape__link {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    border-bottom: 2px solid var(--cor-secundaria);
+    font-weight: 700;
+}
+
+/* <= 800px */
+@media (max-width: 800px){
+
+    .container {
+        flex-direction: column;
+        padding: 8px;
+    }
+
+    .container__introducao-e-formulario {
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        padding: 8px;
+        margin: 16px;
+    }
+
+    .cabecalho {
+        padding: 24px 12px 0px;
+    }
+
+    .tabela__resultados {
+       height: initial !important;
+       margin: 24px;
+    }
+
+    
+    .tabela__dado {
+        padding: 8px;
+    }
+}
+
+/* >= 1080px */
+@media (min-width: 1080px){
+
+    .container {
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+}
